@@ -2,9 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, workflow-test ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+    branches: [ workflow-test ]
 
 env:
   BUNDLE_WITHOUT: "development"
